@@ -1,0 +1,59 @@
+{
+  "name": "Trip",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Trip name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Trip description"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Trip start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Trip end date"
+    },
+    "budget": {
+      "type": "number",
+      "description": "Total budget"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "travel_type": {
+      "type": "string",
+      "enum": [
+        "solo",
+        "couple",
+        "family",
+        "friends",
+        "business"
+      ],
+      "default": "solo"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planning",
+        "ongoing",
+        "completed"
+      ],
+      "default": "planning"
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

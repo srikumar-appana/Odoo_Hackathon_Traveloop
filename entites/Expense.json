@@ -1,0 +1,36 @@
+{
+  "name": "Expense",
+  "type": "object",
+  "properties": {
+    "trip_id": {
+      "type": "string",
+      "description": "Reference to trip"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "stay",
+        "transport",
+        "food",
+        "activities",
+        "shopping",
+        "miscellaneous"
+      ],
+      "default": "miscellaneous"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "trip_id",
+    "amount"
+  ]
+}

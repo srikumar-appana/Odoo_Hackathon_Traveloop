@@ -1,0 +1,34 @@
+{
+    "name": "ChecklistItem",
+    "type": "object",
+    "properties": {
+        "trip_id": {
+            "type": "string",
+            "description": "Reference to trip"
+        },
+        "item": {
+            "type": "string"
+        },
+        "checked": {
+            "type": "boolean",
+            "default": false
+        },
+        "category": {
+            "type": "string",
+            "enum": [
+                "clothing",
+                "electronics",
+                "documents",
+                "essentials",
+                "medical",
+                "toiletries",
+                "other"
+            ],
+            "default": "essentials"
+        }
+    },
+    "required": [
+        "trip_id",
+        "item"
+    ]
+}

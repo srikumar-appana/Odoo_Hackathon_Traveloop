@@ -1,0 +1,28 @@
+{
+  "name": "TripNote",
+  "type": "object",
+  "properties": {
+    "trip_id": {
+      "type": "string",
+      "description": "Reference to trip"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "description": "Rich text content"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "trip_id",
+    "title"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Activity",
+    "type": "object",
+    "properties": {
+        "stop_id": {
+            "type": "string",
+            "description": "Reference to stop"
+        },
+        "trip_id": {
+            "type": "string",
+            "description": "Reference to trip"
+        },
+        "name": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string",
+            "enum": [
+                "adventure",
+                "food",
+                "nature",
+                "shopping",
+                "nightlife",
+                "historical",
+                "culture",
+                "relaxation"
+            ],
+            "default": "culture"
+        },
+        "cost": {
+            "type": "number",
+            "default": 0
+        },
+        "duration_hours": {
+            "type": "number"
+        },
+        "date": {
+            "type": "string",
+            "format": "date"
+        },
+        "time": {
+            "type": "string"
+        },
+        "notes": {
+            "type": "string"
+        },
+        "completed": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "stop_id",
+        "name"
+    ]
+}
